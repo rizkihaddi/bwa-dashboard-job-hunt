@@ -24,6 +24,8 @@ import {
 import { JOBTYPES } from '@/constants';
 import InputSkills from '@/components/organisms/InputSkills';
 import CKEditor from '@/components/organisms/CKEditor';
+import InputBenefits from '@/components/organisms/InputBenefits';
+import { Button } from '@/components/ui/button';
 
 const PostJobPage = () => {
     const [editorLoaded, setEditorLoaded] = useState<boolean>(false);
@@ -31,7 +33,8 @@ const PostJobPage = () => {
     const form = useForm<z.infer<typeof jobFormSchema>>({
         resolver: zodResolver(jobFormSchema),
         defaultValues: {
-            requiredSkills: []
+            requiredSkills: [],
+            benefits: []
         }
     });
 
@@ -192,10 +195,20 @@ const PostJobPage = () => {
                     <FieldInput title='Nice-To-Haves' subtitle='Add nice-to-haves skills and qualifications'>
                         <CKEditor form={form} name="niceToHaves" editorLoaded={editorLoaded} />
                     </FieldInput>
+
+                    <FieldInput title='Perks and Benefits' subtitle='Encourage more people to apply by sharing the rewards and benefits to your employees'>
+                        <InputBenefits form={form} />
+                    </FieldInput>
+
+                    <div className='flex justify-end'>
+                        <Button size="lg">
+                            Do a Review
+                        </Button>
+                    </div>
                 </form>
             </Form>
         </div>
     );
-}; ``
+};
 
 export default PostJobPage;
