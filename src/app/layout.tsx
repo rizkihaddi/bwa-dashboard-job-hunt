@@ -1,3 +1,5 @@
+'use client'
+
 import { Epilogue } from "next/font/google";
 import "./globals.css";
 import Sidebar from "@/components/layouts/Sidebar";

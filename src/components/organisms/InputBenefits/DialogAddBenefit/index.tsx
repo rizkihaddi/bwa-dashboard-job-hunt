@@ -3,7 +3,7 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogFooter,
+    DialogClose,
     DialogHeader,
     DialogTitle,
     DialogTrigger,
@@ -46,7 +46,7 @@ export default function DialogAddBenefits({ updateBenefits }: Props) {
                     Add Benefit
                 </Button>
             </DialogTrigger>
-            <DialogContent>
+            <DialogContent showCloseButton={false}>
                 <DialogHeader>
                     <DialogTitle>Add Benefit</DialogTitle>
                     <DialogDescription>
@@ -71,11 +71,16 @@ export default function DialogAddBenefits({ updateBenefits }: Props) {
                         />
                     </div>
                 </div>
-                <DialogFooter>
+                <div className="flex flex-col-reverse gap-2 sm:flex-row sm:justify-end">
+                    <DialogClose>
+                        <Button type="button" variant="secondary">
+                            Close
+                        </Button>
+                    </DialogClose>
                     <Button type="button" onClick={handleSaveBenefit}>
                         Save
                     </Button>
-                </DialogFooter>
+                </div>
             </DialogContent>
         </Dialog>
     )
