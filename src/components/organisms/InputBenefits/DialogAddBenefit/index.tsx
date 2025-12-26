@@ -3,7 +3,6 @@ import {
     Dialog,
     DialogContent,
     DialogDescription,
-    DialogClose,
     DialogFooter,
     DialogHeader,
     DialogTitle,
@@ -73,11 +72,6 @@ export default function DialogAddBenefits({ updateBenefits }: Props) {
                     </div>
                 </div>
                 <DialogFooter>
-                    <DialogClose asChild>
-                        <Button type="button" variant="secondary">
-                            Close
-                        </Button>
-                    </DialogClose>
                     <Button type="button" onClick={handleSaveBenefit}>
                         Save
                     </Button>
