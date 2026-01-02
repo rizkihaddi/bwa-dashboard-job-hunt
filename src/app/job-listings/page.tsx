@@ -1,20 +1,15 @@
-"use client"
-
 import React, { FC } from 'react';
 import {
     Table,
     TableBody,
-    TableCaption,
     TableCell,
-    TableFooter,
     TableHead,
     TableHeader,
     TableRow,
 } from "@/components/ui/table";
 import { JOB_LISTINGS_COLUMNS, JOB_LISTINGS_DATA } from '@/constants';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { MoreVertical } from 'lucide-react';
+import ButtonActionTable from '@/components/organisms/ButtonActionTable';
 
 interface JobListingsPageProps {
 
@@ -48,9 +43,7 @@ const JobListingsPage: FC<JobListingsPageProps> = () => {
                             <TableCell>{item.applicants}</TableCell>
                             <TableCell>{item.applicants} / {item.needs}</TableCell>
                             <TableCell>
-                                <Button size="icon" variant="outline">
-                                    <MoreVertical className='w-3 h-3' />
-                                </Button>
+                                <ButtonActionTable url='/job-detail/1' />
                             </TableCell>
                         </TableRow>
                     ))}
