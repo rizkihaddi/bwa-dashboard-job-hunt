@@ -2,6 +2,11 @@ import * as z from "zod";
 
 export const JOBTYPES = z.enum(["Full-Time", "Part-Time", "Remote", "Internship"], { message: "You need to select a job types" });
 
+export type optionType = {
+    id: string;
+    label: string;
+};
+
 export const JOB_LISTINGS_COLUMNS: string[] = [
     "Roles",
     "Status",
@@ -34,4 +39,18 @@ export const JOB_LISTINGS_DATA = [
         applicants: 1,
         needs: 12
     }
+];
+
+export const LOCATION_OPTIONS: optionType[] = [
+  { id: "BRN", label: "BRUNEI" },
+  { id: "KHM", label: "CAMBODIA" },
+  { id: "IDN", label: "INDONESIA" },
+  { id: "LAO", label: "LAOS" },
+  { id: "MYS", label: "MALAYSIA" },
+  { id: "MMR", label: "MYANMAR" },
+  { id: "PHL", label: "PHILIPPINES" },
+  { id: "SGP", label: "SINGAPORE" },
+  { id: "THA", label: "THAILAND" },
+  { id: "TLS", label: "TIMOR-LESTE" },
+  { id: "VNM", label: "VIETNAM" }
 ];

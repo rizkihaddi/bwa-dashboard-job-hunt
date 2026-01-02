@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from '@/components/ui/button'
-import React, { FC } from 'react'
+import { FC } from 'react'
 import { AiOutlineHome } from "react-icons/ai";
 import { BiMessageDetail } from "react-icons/bi";
 import { FaHotel, FaUsers } from "react-icons/fa";
@@ -10,13 +10,12 @@ import { GrSchedule } from "react-icons/gr";
 import { IoSettingsOutline, IoLogInOutline } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 
-
 interface SidebarProps {
 
 };
 
 const Sidebar: FC<SidebarProps> = ({ }) => {
-    const router = useRouter()
+    const router = useRouter();
 
     return (
         <div className='pb-12 min-h-screen'>
@@ -46,10 +45,10 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
                             <FaUsers className='mr-2 text-lg' />
                             All Applicants
                         </Button>
-                        <Button 
-                        variant='ghost' 
-                        className='w-full justify-start rounded-none hover:text-primary'
-                        onClick={() => router.push("/job-listings")}
+                        <Button
+                            variant='ghost'
+                            className='w-full justify-start rounded-none hover:text-primary'
+                            onClick={() => router.push("/job-listings")}
                         >
                             <MdOutlineWorkOutline className='mr-2 text-lg' />
                             Job Listings
@@ -67,7 +66,7 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
                         Settings
                     </h2>
                     <div className='space-y-3'>
-                        <Button variant='ghost' className='w-full justify-start rounded-none hover:text-primary'>
+                        <Button onClick={() => router.push("/settings")} variant='ghost' className='w-full justify-start rounded-none hover:text-primary'>
                             <IoSettingsOutline className='mr-2 text-lg' />
                             Settings
                         </Button>
@@ -79,7 +78,7 @@ const Sidebar: FC<SidebarProps> = ({ }) => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Sidebar
+export default Sidebar;

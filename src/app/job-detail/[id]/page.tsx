@@ -5,11 +5,11 @@ import Link from 'next/link';
 import Applicants from '@/components/organisms/Applicants';
 import JobDetail from '@/components/organisms/JobDetail';
 
-interface jobDetailPageProps {
+interface JobDetailPageProps {
 
 };
 
-const JobDetailPage: FC<jobDetailPageProps> = ({ }) => {
+const JobDetailPage: FC<JobDetailPageProps> = ({ }) => {
     return (
         <div>
             <div className='inline-flex items-center gap-5 mb-5'>
