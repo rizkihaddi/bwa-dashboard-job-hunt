@@ -54,6 +54,7 @@ const InputSkills: FC<InputSkillsProps> = ({ form, name, label }) => {
     return (
 <FormControl>
   <div>
+      <FormLabel className="mb-3">{label}</FormLabel>
     <Button
       type="button"
       variant="outline"

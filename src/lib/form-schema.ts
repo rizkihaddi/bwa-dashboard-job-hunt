@@ -25,7 +25,7 @@ export const overviewFormSchema = z.object({
     location: z.string("Location is required"),
     employee: z.string("Employee is required"),
     industry: z.string("Industry is required"),
-    dateFounded: z.string("Date Founded is required"),
-    techStack: z.string().array().nonempty("Tech Stack is required, must be at least 1 tech stack"),
+    dateFounded: z.date("Date Founded is required"),
+    techStack: z.string("Techstack is required").array().nonempty("Tech Stack is required, must be at least 1 tech stack"),
     description: z.string("Description is required")
 });
