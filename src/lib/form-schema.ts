@@ -29,3 +29,11 @@ export const overviewFormSchema = z.object({
     techStack: z.string("Techstack is required").array().nonempty("Tech Stack is required, must be at least 1 tech stack"),
     description: z.string("Description is required")
 });
+
+export const socialMediaFormSchema = z.object({
+    facebook: z.string("Facebook Link is required"),
+    instagram: z.string("Instagram Link is required"),
+    linkedin: z.string("LinkedIn Link is required"),
+    twitter: z.string("Twitter Link is required"),
+    youtube: z.string("YouTube Link is required"),
+});
