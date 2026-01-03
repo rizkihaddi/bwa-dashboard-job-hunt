@@ -26,9 +26,11 @@ import InputSkills from '@/components/organisms/InputSkills';
 import CKEditor from '@/components/organisms/CKEditor';
 import InputBenefits from '@/components/organisms/InputBenefits';
 import { Button } from '@/components/ui/button';
+import { useRouter } from 'next/navigation';
 
 const PostJobPage = () => {
     const [editorLoaded, setEditorLoaded] = useState<boolean>(false);
+    const router = useRouter();
 
     const form = useForm<z.infer<typeof jobFormSchema>>({
         resolver: zodResolver(jobFormSchema),
@@ -49,8 +51,11 @@ const PostJobPage = () => {
     return (
         <div>
             <div className='inline-flex items-center gap-2 cursor-pointer hover:text-primary'>
-                <ArrowLeftIcon className='w-6 h-6' />
+
+                <ArrowLeftIcon className='w-6 h-6' onClick={() => router.push("/job-listings")} />
                 <span className='text-xl font-semibold'>Post a Job</span>
+
+
             </div>
 
             <div className='my-5'>
