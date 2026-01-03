@@ -21,7 +21,7 @@ const TeamForm: FC<TeamFormProps> = ({ }) => {
                     <DialogAddTeam/>
 
                 </div>
-                <div className='grid grid-cols-3 gap-5 mt-5'>
+                <div className='grid grid-cols-3 gap-5 my-6'>
                     {[0, 1, 2].map((item: number) => (
                         <div key={item} className='p-3 bg-gray-100 rounded-sm'>
                             <div className='w-13 h-13 rounded-full bg-gray-400 mx-auto' />
